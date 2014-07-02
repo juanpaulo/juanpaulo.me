@@ -356,6 +356,33 @@
 					background: #df93b8;
 				}
 
+      .icon.circle.fa-linkedin {
+        background: #007bb6;
+        color: white;
+      }
+
+        .icon.circle.fa-linkedin:hover {
+          background: #007bb6;
+        }
+
+      .icon.circle.fa-flickr {
+        background: #ff0084;
+        color: white;
+      }
+
+        .icon.circle.fa-flickr:hover {
+          background: #ff0084;
+        }
+
+      .icon.circle.fa-instagram {
+        background: #517fa4;
+        color: white;
+      }
+
+        .icon.circle.fa-instagram:hover {
+          background: #517fa4;
+        }
+
 		.icon.feature {
 			cursor: default;
 			display: block;
