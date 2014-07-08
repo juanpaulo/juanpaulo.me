@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app='JuanPauloMeApp')
   head
     title= title
     script(src='javascripts/jquery.min.js')
@@ -7,6 +7,7 @@ html
     script(src='javascripts/skel.min.js')
     script(src='javascripts/skel-layers.min.js')
     script(src='javascripts/init.js')
+    script(src='javascripts/angular.min.js')
     noscript
       link(rel='stylesheet', href='stylesheets/skel.css')
       link(rel='stylesheet', href='stylesheets/style.css')
@@ -54,6 +55,6 @@ html
           a.icon.circle.fa-instagram(href='http://instagram.com/juanpaulo' target='_blank')
             span.label Instagram
       span.copyright
-        | © Untitled. All rights reserved. Design:
-        a(href='http://html5up.net') HTML5 UP
+        | Design inspired by:&nbsp;
+        a(href='http://html5up.net/twenty') Twenty
         | .

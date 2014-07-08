@@ -1,174 +1,165 @@
 extends layout
 
 block content
-  section#banner
-    .inner
-      header
-        .circle
-          img(src='images/mugshot.jpg', alt='')
-      h3 Juan Paulo Gutierrez
-      p
-        | I'm a Filipino engineer living in Tokyo
-        br
-        | with a passion for art and technology.
-        br
-        | Husband to&nbsp;
-        a(href='http://instagram.com/miamama2014' target='_blank') Nozomi
-        | , father to&nbsp;
-        a(href='http://afterthebigday.com/whats-in-a-name/' target='_blank') Mía
-        | ,
-        br
-        | and a follower of Christ.
-      //- footer
-      //-   ul.buttons.vertical
-      //-     li
-      //-       a.button.fit.scrolly(href='#main') Tell Me More
-  article#main
-    header#photography.special.container
-      span.icon.fa-camera-retro
-    section.wrapper.style3.container.special
-      header.major
-        h2
-          | Next look at this
-          strong cool stuff
-      .row
-        .6u
-          section
-            a.image.feature(href='#')
-              img(src='images/pic01.jpg', alt='')
+  script(src='javascripts/app.js')
+  div(ng-controller='JuanPauloMeCtrl')
+    section#banner
+      .inner
+        header
+          .circle
+            img(src='images/mugshot.jpg', alt='')
+        h3 Juan Paulo M. Gutierrez
+        p
+          | I'm a Filipino engineer living in Tokyo
+          br
+          | with a passion for art and technology.
+          br
+          | Husband to&nbsp;
+          a(href='http://instagram.com/miamama2014' target='_blank') Nozomi
+          | , father to&nbsp;
+          a(href='http://afterthebigday.com/whats-in-a-name/' target='_blank') Mía
+          | ,
+          br
+          | and a follower of Christ.
+        //- footer
+        //-   ul.buttons.vertical
+        //-     li
+        //-       a.button.fit.scrolly(href='#main') Tell Me More
+    article#main
+      header#photography.special.container
+        span.icon.fa-camera-retro
+      section.wrapper.style3.container.special
+        header
+          h2
+            | Next look at this
+        p
+          | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+        div(ng-repeat="photo in photos")
+          .6u(ng-if="$even")
+            section
+              a.image.feature(href='https://www.flickr.com/photos/82135540@N00/{{photo.id}}' target='_blank')
+                img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg', alt='')
+          .6u(ng-if="$odd")
+            section
+              a.image.feature(href='https://www.flickr.com/photos/82135540@N00/{{photo.id}' target='_blank')
+                img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg', alt='')
+        //- .row
+        //-   .6u
+        //-     section
+        //-       a.image.feature(href='#')
+        //-         img(src='images/pic05.jpg', alt='')
+        //-   .6u
+        //-     section
+        //-       a.image.feature(href='#')
+        //-         img(src='images/pic06.jpg', alt='')
+              //- header
+              //-   h3 And Another Train
+              //- p
+              //-   | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+        footer.major
+          ul.buttons
+            li
+              a.button.special(href='https://www.flickr.com/photos/juan_paulo/' target='_blank') Flickr
+            li
+              a.button.special(href='http://500px.com/juanpaulo' target='_blank') 500px
+      header#projects.special.container
+        span.icon.fa-gears
+      section.wrapper.style2.container.special-alt
+        .row.half
+          .8u
             header
-              h3 A Really Fast Train
+              h2
+                | Behold the
+                strong icons
+                | that visualize what you’re all about. or just take up space. your call bro.
             p
-              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-        .6u
-          section
-            a.image.feature(href='#')
-              img(src='images/pic02.jpg', alt='')
-            header
-              h3 An Airport Terminal
-            p
-              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-      .row
-        .6u
-          section
-            a.image.feature(href='#')
-              img(src='images/pic03.jpg', alt='')
-            header
-              h3 Hyperspace Travel
-            p
-              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-        .6u
-          section
-            a.image.feature(href='#')
-              img(src='images/pic04.jpg', alt='')
-            header
-              h3 And Another Train
-            p
-              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-      footer.major
-        ul.buttons
-          li
-            a.button.special(href='https://www.flickr.com/photos/juan_paulo/' target='_blank') Flickr
-          li
-            a.button.special(href='http://500px.com/juanpaulo' target='_blank') 500px
-    header#projects.special.container
-      span.icon.fa-gears
-    section.wrapper.style2.container.special-alt
-      .row.half
-        .8u
-          header
-            h2
-              | Behold the
-              strong icons
-              | that visualize what you’re all about. or just take up space. your call bro.
-          p
-            | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.
-          footer
-            ul.buttons
-              li
-                a.button(href='#') Find Out More
-        .4u.skel-cell-important
-          ul.feature-icons
-            li
-              span.icon.fa-code
-                span.label Feature 1
-            li
-              span.icon.fa-bar-chart-o
-                span.label Feature 2
-            li
-              span.icon.fa-child
-                span.label Feature 3
-            li
-              span.icon.fa-leaf
-                span.label Feature 4
-            li
-              span.icon.fa-music
-                span.label Feature 5
-            li
-              span.icon.fa-home
-                span.label Feature 6
-    header#blog.special.container
-      span.icon.fa-pencil
-    section.wrapper.style1.container.special
-      .row
-        .4u
-          section
-            span.icon.feature.fa-camera
-            header
-              h3 Photography
-            p
-              | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+              | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.
             footer
-              a.button(href='#') Find Out More
-        .4u
-          section
-            span.icon.feature.fa-plane
-            header
-              h3 Travel
-            p
-              | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
-            footer
-              a.button(href='#') Find Out More
-        .4u
-          section
-            span.icon.feature.fa-cutlery
-            header
-              h3 Food
-            p
-              | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
-            footer
-              a.button(href='#') Find Out More
-    //- contact
-    header#contact.special.container
-      span.icon.fa-envelope
-        h2 Get In Touch
-        p Use the form below to give /dev/null a piece of your mind.
-    section.wrapper.style4.special.container.small
-      .content
-        form
-          .row.half.no-collapse-1
-            .6u
-              input(type='text', name='name', placeholder='Name')
-            .6u
-              input(type='text', name='email', placeholder='Email')
-          .row.half
-            .12u
-              input(type='text', name='subject', placeholder='Subject')
-          .row.half
-            .12u
-              textarea(name='message', placeholder='Message', rows='7')
-          .row
-            .12u
               ul.buttons
                 li
-                  a.button.special(href='#') Send Message
+                  a.button(href='#') Find Out More
+          .4u.skel-cell-important
+            ul.feature-icons
+              li
+                span.icon.fa-code
+                  span.label Feature 1
+              li
+                span.icon.fa-bar-chart-o
+                  span.label Feature 2
+              li
+                span.icon.fa-child
+                  span.label Feature 3
+              li
+                span.icon.fa-leaf
+                  span.label Feature 4
+              li
+                span.icon.fa-music
+                  span.label Feature 5
+              li
+                span.icon.fa-home
+                  span.label Feature 6
+      header#blog.special.container
+        span.icon.fa-pencil
+      section.wrapper.style1.container.special
+        .row
+          .4u
+            section
+              span.icon.feature.fa-camera
+              header
+                h3 Photography
+              p
+                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+              footer
+                a.button(href='#') Find Out More
+          .4u
+            section
+              span.icon.feature.fa-plane
+              header
+                h3 Travel
+              p
+                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+              footer
+                a.button(href='#') Find Out More
+          .4u
+            section
+              span.icon.feature.fa-cutlery
+              header
+                h3 Food
+              p
+                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+              footer
+                a.button(href='#') Find Out More
+      //- contact
+      header#contact.special.container
+        span.icon.fa-envelope
+          h2 Get In Touch
+          p Use the form below to give /dev/null a piece of your mind.
+      section.wrapper.style4.special.container.small
+        .content
+          form
+            .row.half.no-collapse-1
+              .6u
+                input(type='text', name='name', placeholder='Name')
+              .6u
+                input(type='text', name='email', placeholder='Email')
+            .row.half
+              .12u
+                input(type='text', name='subject', placeholder='Subject')
+            .row.half
+              .12u
+                textarea(name='message', placeholder='Message', rows='7')
+            .row
+              .12u
+                ul.buttons
+                  li
+                    a.button.special(href='#') Send Message
 
-    section#cta
-      header
-        h2
-          | Ready to do
-          strong something
-          | ?
-        p Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
+      section#cta
+        header
+          h2
+            | Ready to do
+            strong something
+            | ?
+          p Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
 
 
