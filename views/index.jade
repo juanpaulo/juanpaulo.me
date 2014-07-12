@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  script(src='javascripts/app.js')
+  script(src='javascripts/app.js').
   div(ng-controller='JuanPauloMeCtrl')
     section#banner
       .inner
@@ -21,10 +21,10 @@ block content
           | ,
           br
           | and a follower of Christ.
-        //- footer
-        //-   ul.buttons.vertical
-        //-     li
-        //-       a.button.fit.scrolly(href='#main') Tell Me More
+        footer
+          ul.buttons.vertical
+            li
+              a.button.scrolly(href='#main') Foo Bar Baz
     article#main
       header#photography.special.container
         span.icon.fa-camera-retro
@@ -34,50 +34,43 @@ block content
             | Next look at this
         p
           | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-        div(ng-repeat="photo in photos")
-          .6u(ng-if="$even")
-            section
-              a.image.feature(href='https://www.flickr.com/photos/82135540@N00/{{photo.id}}' target='_blank')
-                img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg', alt='')
-          .6u(ng-if="$odd")
-            section
-              a.image.feature(href='https://www.flickr.com/photos/82135540@N00/{{photo.id}' target='_blank')
-                img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg', alt='')
-        //- .row
-        //-   .6u
-        //-     section
-        //-       a.image.feature(href='#')
-        //-         img(src='images/pic05.jpg', alt='')
-        //-   .6u
-        //-     section
-        //-       a.image.feature(href='#')
-        //-         img(src='images/pic06.jpg', alt='')
-              //- header
-              //-   h3 And Another Train
-              //- p
-              //-   | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+        section.collage
+          div(ng-repeat="photo in photos")
+            a
+              img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg')
+          //- .row
+          //-   .6u
+          //-     section
+          //-       a.image.feature(href='#')
+          //-         img(src='images/pic05.jpg', alt='')
+          //-   .6u
+          //-     section
+          //-       a.image.feature(href='#')
+          //-         img(src='images/pic06.jpg', alt='')
+          //- header
+          //-   h3 And Another Train
+          //- p
+          //-   | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
         footer.major
           ul.buttons
             li
-              a.button.special(href='https://www.flickr.com/photos/juan_paulo/' target='_blank') Flickr
-            li
-              a.button.special(href='http://500px.com/juanpaulo' target='_blank') 500px
-      header#projects.special.container
-        span.icon.fa-gears
-      section.wrapper.style2.container.special-alt
+              a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank') Jump to Flickr page
+            //- li
+            //-   a.button(href='http://500px.com/juanpaulo' target='_blank') 500px
+      //- header#projects.special.container
+      //-   span.icon.fa-gears
+      section#projects.wrapper.style2.container.special-alt
         .row.half
           .8u
             header
               h2
-                | Behold the
-                strong icons
-                | that visualize what you’re all about. or just take up space. your call bro.
+                | Projects
             p
               | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.
             footer
               ul.buttons
                 li
-                  a.button(href='#') Find Out More
+                  a.button(href='/projects') Jump to Projects Page
           .4u.skel-cell-important
             ul.feature-icons
               li
@@ -93,14 +86,14 @@ block content
                 span.icon.fa-leaf
                   span.label Feature 4
               li
-                span.icon.fa-music
+                span.icon.fa-home
                   span.label Feature 5
               li
-                span.icon.fa-home
+                span.icon.fa-gears
                   span.label Feature 6
-      header#blog.special.container
-        span.icon.fa-pencil
-      section.wrapper.style1.container.special
+      //- header#blog.special.container
+      //-   span.icon.fa-pencil
+      section#blog.wrapper.style1.container.special
         .row
           .4u
             section
@@ -110,7 +103,7 @@ block content
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='#') Find Out More
+                a.button(href='/blog') Find Out More
           .4u
             section
               span.icon.feature.fa-plane
@@ -119,7 +112,7 @@ block content
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='#') Find Out More
+                a.button(href='/blog') Find Out More
           .4u
             section
               span.icon.feature.fa-cutlery
@@ -128,7 +121,7 @@ block content
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='#') Find Out More
+                a.button(href='/blog') Find Out More
       //- contact
       header#contact.special.container
         span.icon.fa-envelope
@@ -152,7 +145,7 @@ block content
               .12u
                 ul.buttons
                   li
-                    a.button.special(href='#') Send Message
+                    a.button(href='#') Send Message
 
       section#cta
         header

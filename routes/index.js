@@ -15,9 +15,8 @@ router.post('/flickrapi', function(req, res) {
     access_token_secret: process.env.ACCESS_TOKEN_SECRET,
   };
   Flickr.authenticate(flickrOptions, function(error, flickr) {
-    // console.log(flickr);
     flickr.photosets.getPhotos({
-      photoset_id: '72157622849227887'
+      photoset_id: '72157622849227887' // Interestingness Album
     }, function(err, result) {
       if(err) {
         throw new Error(err);
@@ -29,7 +28,11 @@ router.post('/flickrapi', function(req, res) {
 });
 
 router.get('/projects', function(req, res) {
-  res.render('projects', { title: 'Projects' });
+  res.render('under-construction', { title: 'Projects' });
+});
+
+router.get('/blog', function(req, res) {
+  res.render('under-construction', { title: 'Blog' });
 });
 
 module.exports = router;
