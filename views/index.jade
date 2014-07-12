@@ -24,14 +24,14 @@ block content
         footer
           ul.buttons.vertical
             li
-              a.button.scrolly(href='#main') Foo Bar Baz
-    article#main
-      header#photography.special.container
-        span.icon.fa-camera-retro
+              a.button.scrolly(href='#photography') Tell Me More
+    article
+      header#photography.separator
+      //-   span.icon.fa-camera-retro
       section.wrapper.style3.container.special
         header
           h2
-            | Next look at this
+            | Photography
         p
           | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
         section.collage
@@ -54,12 +54,13 @@ block content
         footer.major
           ul.buttons
             li
-              a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank') Jump to Flickr page
+              a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank')
+                span.icon.fa-camera-retro
+                span &nbsp;View Photostream
             //- li
             //-   a.button(href='http://500px.com/juanpaulo' target='_blank') 500px
-      //- header#projects.special.container
-      //-   span.icon.fa-gears
-      section#projects.wrapper.style2.container.special-alt
+      header#projects.separator
+      section.wrapper.style2.container.special-alt
         .row.half
           .8u
             header
@@ -70,7 +71,9 @@ block content
             footer
               ul.buttons
                 li
-                  a.button(href='/projects') Jump to Projects Page
+                  a.button(href='/projects')
+                    span.icon.fa-wrench
+                    span &nbsp;View Page
           .4u.skel-cell-important
             ul.feature-icons
               li
@@ -91,19 +94,25 @@ block content
               li
                 span.icon.fa-gears
                   span.label Feature 6
-      //- header#blog.special.container
-      //-   span.icon.fa-pencil
-      section#blog.wrapper.style1.container.special
+      header#blog.separator
+      section.wrapper.style1.container.special
+        header
+          h2
+            | Blog
+        p
+          | Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
         .row
           .4u
             section
-              span.icon.feature.fa-camera
+              span.icon.feature.fa-laptop
               header
-                h3 Photography
+                h3 Technology
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='/blog') Find Out More
+                a.button(href='/blog')
+                  span.icon.fa-tag
+                  span &nbsp;View Posts
           .4u
             section
               span.icon.feature.fa-plane
@@ -112,7 +121,9 @@ block content
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='/blog') Find Out More
+                a.button(href='/blog')
+                  span.icon.fa-tag
+                  span &nbsp;View Posts
           .4u
             section
               span.icon.feature.fa-cutlery
@@ -121,13 +132,16 @@ block content
               p
                 | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
               footer
-                a.button(href='/blog') Find Out More
-      //- contact
-      header#contact.special.container
-        span.icon.fa-envelope
-          h2 Get In Touch
-          p Use the form below to give /dev/null a piece of your mind.
+                a.button(href='/blog')
+                  span.icon.fa-tag
+                  span &nbsp;View Posts
+      header#contact.separator
       section.wrapper.style4.special.container.small
+        header
+          h2
+            | Contact
+        p
+          | Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
         .content
           form
             .row.half.no-collapse-1
@@ -145,7 +159,9 @@ block content
               .12u
                 ul.buttons
                   li
-                    a.button(href='#') Send Message
+                    a.button(href='#')
+                      span.icon.fa-envelope
+                      span &nbsp;Send Message
 
       section#cta
         header

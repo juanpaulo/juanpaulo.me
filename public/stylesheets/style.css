@@ -1071,6 +1071,11 @@
       -moz-border-radius: 50%;
     }
 
+    .separator {
+      width: auto;
+      height: 5em;
+    }
+
     .collage{
       padding:10px;
     }
