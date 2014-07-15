@@ -105,6 +105,7 @@
 		border-left: solid 0.5em rgba(124, 128, 129, 0.2);
 		font-style: italic;
 		padding: 1em 0 1em 2em;
+    /*width: 90%;*/
 	}
 
 	section.special, article.special {
@@ -1076,8 +1077,22 @@
       height: 5em;
     }
 
+    blockquote cite {
+      font-size: 0.8em;
+      display: block;
+      /*margin-top: 5px;*/
+    }
+
+    blockquote cite:before {
+      content: "\2014 \2009";
+    }
+
+    .item a img {
+      width: 25%;
+    }
+
     .collage{
-      padding:10px;
+      /*padding:10px;*/
     }
 
     .collage img{

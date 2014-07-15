@@ -32,8 +32,8 @@ block content
         header
           h2
             | Photography
-        p
-          | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+        //- p
+        //-   | TODO description here
         section.collage
           div(ng-repeat="photo in photos")
             a
@@ -67,11 +67,18 @@ block content
               h2
                 | Projects
             p
-              | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.
+              | As an advocate of&nbsp;
+              strong
+                | Monozukuri
+              |, I‘m consistently engaged in making things through various projects including Open Source Software, Fitness Tracking, Data Visualization, Home Automation, Horticulture and Community Building. Check out the project page for more information!
+            blockquote
+              | The Japanese word monozukuri has a literal meaning of “production” — “mono” is the thing that is made or created, and “zukuri” refers to the act of making. Monozukuri, however, has meanings beyond the literal; it can be best compared to the word “craftsmanship” in English, which describes the making of an object with particular skill, care or artistry.
+              cite
+                | MIT Sloan Management Review
             footer
               ul.buttons
                 li
-                  a.button(href='/projects')
+                  a.button(href='/projects' target='_blank')
                     span.icon.fa-wrench
                     span &nbsp;View Page
           .4u.skel-cell-important
@@ -80,27 +87,27 @@ block content
                 span.icon.fa-code
                   span.label Feature 1
               li
-                span.icon.fa-bar-chart-o
+                span.icon.fa-medkit
                   span.label Feature 2
               li
-                span.icon.fa-child
+                span.icon.fa-bar-chart-o
                   span.label Feature 3
               li
-                span.icon.fa-leaf
+                span.icon.fa-gears
                   span.label Feature 4
               li
-                span.icon.fa-home
+                span.icon.fa-leaf
                   span.label Feature 5
               li
-                span.icon.fa-gears
+                span.icon.fa-users
                   span.label Feature 6
       header#blog.separator
       section.wrapper.style1.container.special
         header
           h2
             | Blog
-        p
-          | Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
+        //- p
+        //-   | TODO description here
         .row
           .4u
             section
@@ -108,18 +115,18 @@ block content
               header
                 h3 Technology
               p
-                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+                | Random ramblings on technology, computers, products, the Internet of Things and other cool stuff.
               footer
                 a.button(href='/blog')
                   span.icon.fa-tag
                   span &nbsp;View Posts
           .4u
             section
-              span.icon.feature.fa-plane
+              span.icon.feature.fa-home
               header
-                h3 Travel
+                h3 Home
               p
-                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+                | DIY solutions for home improvement, maintenance, redecorating, repair, renovation, and more.
               footer
                 a.button(href='/blog')
                   span.icon.fa-tag
@@ -130,7 +137,7 @@ block content
               header
                 h3 Food
               p
-                | Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
+                | A log of dietary intakes, home-grown produce, recipes, brewing coffee and beer.
               footer
                 a.button(href='/blog')
                   span.icon.fa-tag
@@ -140,8 +147,8 @@ block content
         header
           h2
             | Contact
-        p
-          | Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
+        //- p
+        //-   | TODO description here
         .content
           form
             .row.half.no-collapse-1
@@ -164,11 +171,7 @@ block content
                       span &nbsp;Send Message
 
       section#cta
-        header
-          h2
-            | Ready to do
-            strong something
-            | ?
-          p Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
-
-
+        //- header
+        //-   h2 Elsewhere
+        //- p
+        //-   | You can find me on a variety of social media channels
