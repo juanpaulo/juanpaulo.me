@@ -35,4 +35,8 @@ router.get('/blog', function(req, res) {
   res.render('under-construction', { title: 'Blog' });
 });
 
+router.get('/resume', function(req, res) {
+  res.render('resume', { title: 'Resume' });
+});
+
 module.exports = router;
