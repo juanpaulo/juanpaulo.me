@@ -1,177 +1,105 @@
 extends layout
 
 block content
-  script(src='javascripts/app.js').
-  div(ng-controller='JuanPauloMeCtrl')
-    section#banner
-      .inner
-        header
-          .circle
-            img(src='images/mugshot.jpg', alt='')
-        h3 Juan Paulo M. Gutierrez
-        p
-          | I'm a Filipino engineer living in Tokyo
-          br
-          | with a passion for art and technology.
-          br
-          | Husband to&nbsp;
-          a(href='http://instagram.com/miamama2014' target='_blank') Nozomi
-          | , father to&nbsp;
-          a(href='http://afterthebigday.com/whats-in-a-name/' target='_blank') Mía
-          | ,
-          br
-          | and a follower of Christ.
-        footer
-          ul.buttons.vertical
-            li
-              a.button.scrolly(href='#photography') Tell Me More
-    article
-      header#photography.separator
-      //-   span.icon.fa-camera-retro
-      section.wrapper.style3.container.special
-        header
-          h2
-            | Photography
-        //- p
-        //-   | TODO description here
-        section.collage
-          div(ng-repeat="photo in photos")
-            a
-              img(src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg')
-          //- .row
-          //-   .6u
-          //-     section
-          //-       a.image.feature(href='#')
-          //-         img(src='images/pic05.jpg', alt='')
-          //-   .6u
-          //-     section
-          //-       a.image.feature(href='#')
-          //-         img(src='images/pic06.jpg', alt='')
-          //- header
-          //-   h3 And Another Train
-          //- p
-          //-   | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-        footer.major
-          ul.buttons
-            li
-              a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank')
-                span.icon.fa-camera-retro
-                span &nbsp;View Photostream
-            //- li
-            //-   a.button(href='http://500px.com/juanpaulo' target='_blank') 500px
-      header#projects.separator
-      section.wrapper.style2.container.special-alt
-        .row.half
-          .8u
+  section#banner
+    .inner
+      header
+        .circle
+          img(src='images/mugshot.jpg', alt='')
+      h3 Juan Paulo M. Gutierrez
+      p
+        | I'm a Filipino engineer living in Tokyo
+        br
+        | with a passion for art and technology.
+        br
+        | Husband to&nbsp;
+        a(href='http://instagram.com/miamama2014' target='_blank') Nozomi
+        | , father to&nbsp;
+        a(href='http://afterthebigday.com/whats-in-a-name/' target='_blank') Mía
+        | ,
+        br
+        | and a follower of Christ.
+      footer
+        ul.buttons.vertical
+          li
+            a.button.scrolly(href='#photography') Tell Me More
+  article
+    header.separator
+    section.wrapper.style1.container.special
+      header.separator
+        //- h2
+        //-   | Foo bar
+      .row
+        .4u#blog
+          section
+            a.image.feature(href='#')
+              img(src='images/pic01.jpg', alt='')
             header
-              h2
-                | Projects
+              h3 Blog
+            p
+              | Random ramblings on technology, computers, products, the Internet of Things and other cool stuff.
+              | DIY solutions for home improvement, maintenance, redecorating, repair, renovation, and more.
+              | A log of dietary intakes, home-grown produce, recipes, brewing coffee and beer.
+            footer
+              a.button(href='/blog')
+                span.icon.fa-pencil
+                span &nbsp;View Posts
+        .4u#photography
+          section
+            a.image.feature(href='#')
+              img(src='images/pic02.jpg', alt='')
+            header
+              h3 Photography
+            p
+              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+            footer
+              a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank')
+                span.icon.fa-camera
+                span &nbsp;Flickr page
+        .4u#projects
+          section
+            a.image.feature.clip(href='#')
+              img(src='images/pic02.jpg', alt='')
+            header
+              h3 Projects
             p
               | As an advocate of&nbsp;
-              strong
-                | Monozukuri
-              |, I‘m consistently engaged in making things through various projects including Open Source Software, Fitness Tracking, Data Visualization, Home Automation, Horticulture and Community Building. Check out the project page for more information!
-            blockquote
-              | The Japanese word monozukuri has a literal meaning of “production” — “mono” is the thing that is made or created, and “zukuri” refers to the act of making. Monozukuri, however, has meanings beyond the literal; it can be best compared to the word “craftsmanship” in English, which describes the making of an object with particular skill, care or artistry.
-              cite
-                | MIT Sloan Management Review
+              a(href='http://sloanreview.mit.edu/article/recapturing-monozukuri-in-toyotas-manufacturing-ethos/' target='_blank') Monozukuri
+              |, I‘m consistently engaged in making things through various projects including Open Source Software, Activity Tracking, Data Visualization, Home Automation, Horticulture and Community Building. Check out the project page for more information!
             footer
+              a.button(href='/projects')
+                span.icon.fa-wrench
+                span &nbsp;Check Out Projects
+    header#contact.separator
+    section.wrapper.style4.special.container.small
+      header
+        h2
+          | Contact
+      //- p
+      //-   | TODO description here
+      .content
+        form
+          .row.half.no-collapse-1
+            .6u
+              input(type='text', name='name', placeholder='Name')
+            .6u
+              input(type='text', name='email', placeholder='Email')
+          .row.half
+            .12u
+              input(type='text', name='subject', placeholder='Subject')
+          .row.half
+            .12u
+              textarea(name='message', placeholder='Message', rows='7')
+          .row
+            .12u
               ul.buttons
                 li
-                  a.button(href='/projects' target='_blank')
-                    span.icon.fa-wrench
-                    span &nbsp;View Page
-          .4u.skel-cell-important
-            ul.feature-icons
-              li
-                span.icon.fa-code
-                  span.label Feature 1
-              li
-                span.icon.fa-medkit
-                  span.label Feature 2
-              li
-                span.icon.fa-bar-chart-o
-                  span.label Feature 3
-              li
-                span.icon.fa-gears
-                  span.label Feature 4
-              li
-                span.icon.fa-leaf
-                  span.label Feature 5
-              li
-                span.icon.fa-users
-                  span.label Feature 6
-      header#blog.separator
-      section.wrapper.style1.container.special
-        header
-          h2
-            | Blog
-        //- p
-        //-   | TODO description here
-        .row
-          .4u
-            section
-              span.icon.feature.fa-laptop
-              header
-                h3 Technology
-              p
-                | Random ramblings on technology, computers, products, the Internet of Things and other cool stuff.
-              footer
-                a.button(href='/blog')
-                  span.icon.fa-tag
-                  span &nbsp;View Posts
-          .4u
-            section
-              span.icon.feature.fa-home
-              header
-                h3 Home
-              p
-                | DIY solutions for home improvement, maintenance, redecorating, repair, renovation, and more.
-              footer
-                a.button(href='/blog')
-                  span.icon.fa-tag
-                  span &nbsp;View Posts
-          .4u
-            section
-              span.icon.feature.fa-cutlery
-              header
-                h3 Food
-              p
-                | A log of dietary intakes, home-grown produce, recipes, brewing coffee and beer.
-              footer
-                a.button(href='/blog')
-                  span.icon.fa-tag
-                  span &nbsp;View Posts
-      header#contact.separator
-      section.wrapper.style4.special.container.small
-        header
-          h2
-            | Contact
-        //- p
-        //-   | TODO description here
-        .content
-          form
-            .row.half.no-collapse-1
-              .6u
-                input(type='text', name='name', placeholder='Name')
-              .6u
-                input(type='text', name='email', placeholder='Email')
-            .row.half
-              .12u
-                input(type='text', name='subject', placeholder='Subject')
-            .row.half
-              .12u
-                textarea(name='message', placeholder='Message', rows='7')
-            .row
-              .12u
-                ul.buttons
-                  li
-                    a.button(href='#')
-                      span.icon.fa-envelope
-                      span &nbsp;Send Message
+                  a.button(href='#')
+                    span.icon.fa-envelope
+                    span &nbsp;Send Message
 
-      section#cta
-        //- header
-        //-   h2 Elsewhere
-        //- p
-        //-   | You can find me on a variety of social media channels
+    section#cta
+      //- header
+      //-   h2 Elsewhere
+      //- p
+      //-   | You can find me on a variety of social media channels
