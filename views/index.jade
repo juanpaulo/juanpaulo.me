@@ -24,42 +24,44 @@ block content
           li
             a.button.scrolly(href='#photography') Tell Me More
   article
-    header.separator
+    header#content.separator
     section.wrapper.style1.container.special
-      header.separator
-        //- h2
-        //-   | Foo bar
+      //- header
+      //-   h2
+      //-     | TODO add description
       .row
         .4u#blog
           section
             a.image.feature(href='#')
-              img(src='images/pic01.jpg', alt='')
+              img(src='images/blog.jpg', alt='')
             header
               h3 Blog
             p
               | Random ramblings on technology, computers, products, the Internet of Things and other cool stuff.
-              | DIY solutions for home improvement, maintenance, redecorating, repair, renovation, and more.
-              | A log of dietary intakes, home-grown produce, recipes, brewing coffee and beer.
+              | DIY solutions for home improvement, home-grown produce, recipes, brewing coffee and beer.
+              | Journal of thoughts from daily devotions and quiet time, prayers and reading plans.
             footer
-              a.button(href='/blog')
+              a.button(href='https://medium.com/@juanpaulo' target='_blank')
                 span.icon.fa-pencil
-                span &nbsp;View Posts
+                span &nbsp;Medium Blog
         .4u#photography
           section
             a.image.feature(href='#')
-              img(src='images/pic02.jpg', alt='')
+              img(src='images/photography.jpg', alt='')
             header
               h3 Photography
             p
-              | Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+              | Photography is an expression of my artistic view of the world around me.
+              br
+              | I consider photos as bookmarks that take us back to a time, place or event in our lives. I like to tell a story through images that convey a feeling or impression that can be communicated, shared and experienced.
             footer
               a.button(href='https://www.flickr.com/photos/juan_paulo/' target='_blank')
                 span.icon.fa-camera
-                span &nbsp;Flickr page
+                span &nbsp;Flickr Photostream
         .4u#projects
           section
             a.image.feature.clip(href='#')
-              img(src='images/pic02.jpg', alt='')
+              img(src='images/projects.jpg', alt='')
             header
               h3 Projects
             p
@@ -69,14 +71,14 @@ block content
             footer
               a.button(href='/projects')
                 span.icon.fa-wrench
-                span &nbsp;Check Out Projects
+                span &nbsp;Projects Page
     header#contact.separator
     section.wrapper.style4.special.container.small
       header
         h2
           | Contact
       //- p
-      //-   | TODO description here
+      //-   | TODO add description
       .content
         form
           .row.half.no-collapse-1
