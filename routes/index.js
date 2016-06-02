@@ -6,6 +6,11 @@ router.get('/', function(req, res) {
   res.render('eventually', { title: 'juanpaulo.me'});
 });
 
+// Availability monitoring
+router.get('/ping', function(req, res) {
+  res.send('pong');
+});
+
 // router.post('/flickrapi', function(req, res) {
 //   var Flickr = require('flickrapi'),
 //   flickrOptions = {
